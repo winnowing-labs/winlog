@@ -1,0 +1,27 @@
+[project]
+name = "winlog"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Mycchaka Kleinbort", email = "mkleinbort@winnowinglabs.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "loguru>=0.7.3",
+]
+
+[project.scripts]
+winlog = "winlog:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "windev",
+]
+
+[tool.uv.sources]
+windev = { git = "ssh://git@github.com/winnowing-labs/windev.git" }
